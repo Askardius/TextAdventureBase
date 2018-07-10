@@ -61,5 +61,5 @@ def get_chapter_text():
     return adventure['adventure']['chapter'][current_id]['text'];
 
 # give the actual chapters follower
-def get_chapter_text():
+def get_follower():
     return adventure['adventure']['chapter'][current_id]['follower'];
