@@ -136,6 +136,14 @@ def do_followers_have_requirements():
     return return_list
 
 
+# checks if the adventure is over
+def check_if_end(id):
+    if(adventure['adventure']['chapter'][id]['trigger']['story_control'] == "end"):
+        return True
+    else:
+        return False
+
+
 # returns the adventure details
 def get_adventure_details():
     details = {"name": adventure['adventure']['name'], "author:": adventure['adventure']['author'], "description": adventure['adventure']['description']}

@@ -257,8 +257,8 @@
             }
         },
         "17": {
-            "id": "11",
-            "name": "noch auf ein Bier bleiben?",
+            "id": "17",
+            "name": "geht trotzdem auf den Mann los",
             "text": "Der Magier wehrt sich nur halbherzig, wirkt keinerlei Zauber, und bittet euch immer wieder um Nachsicht. Sehr seltsam...",
             "follower": {
                 "0": 22,
@@ -271,129 +271,107 @@
             }
         },
         "18": {
-            "id": "11",
+            "id": "18",
             "name": "noch auf ein Bier bleiben?",
-            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "text": "Nachdem Ihr etwa vier Stunden gen PraiosEfferd gegangen seid, seht ihr den Gutshof. Die Tür scheint nur angelehnt zu sein. Wollt ihr...",
             "follower": {
-                "0": null,
-                "1": null,
+                "0": 21,
+                "1": 20,
 		        "2": null
             },
             "trigger": {
-                "story_control": "end",
-                "inventory": "use|Waffen",
-                "require": "Waffen"
+                "story_control": "run",
+                "inventory": null
             }
-        }
+        },
         "19": {
             "id": "19",
             "name": "den Mann angreifen.",
-            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "text": "Als Ihr mit den Waffen auf den Alten zustürmt, bemerkt er euch. “Haltet ein!”, ruft er mit schwacher Stimme, während ein Zucken durch seinen Körper geht. Wollt Ihr...",
             "follower": {
-                "0": null,
-                "1": null,
-		        "2": null
+                "0": 17,
+                "1": 24,
+		        "2": 29
             },
             "trigger": {
-                "story_control": "end",
-                "inventory": "use|Waffen",
-                "require": "Waffen"
+                "story_control": "run",
+                "inventory": null
             }
-        }
+        },
         "20": {
-            "id": "11",
-            "name": "noch auf ein Bier bleiben?",
-            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "id": "20",
+            "name": "euch zuerst noch umsehen",
+            "text": "Der Hof steht zwar auf festem Boden, aber schon wenige Schritt in Richtung Praios beginnt unwegsames Sumpfland. In der Ferne seht ihr einige Schatten sich bewegen, vermutlich Untote, aber sie scheinen euch nicht zu bemerken. Das Gebäude ist recht alt, wurde jedoch vor kurzem zumindest teilweise renoviert. Vorsichtig blickt Ihr durch ein Fenster. Ihr seht eine Gestalt, die von einem gelegentlichen Zucken abgesehen regungslos auf einem Schemel sitzt. ",
             "follower": {
-                "0": null,
+                "0": 21,
                 "1": null,
 		        "2": null
             },
             "trigger": {
-                "story_control": "end",
-                "inventory": "use|Waffen",
-                "require": "Waffen"
+                "story_control": "run",
+                "inventory": null
             }
-        }
+        },
         "21": {
-            "id": "11",
-            "name": "noch auf ein Bier bleiben?",
-            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "id": "21",
+            "name": "das Gebäude betreten",
+            "text": "An der Tür fällt Euch ein metallenes Relief einer Gans auf, das Symbol Travias, das für Gastfreundschaft steht. Jedoch hat irgend jemand das komplette Tier mit Blut beschmutzt. Euch schaudert vor solcher Gottlosigkeit! Mit gezogener Waffe öffnet Ihr die Tür vorsichtig und betretet das Haus. Ihr kommt in einen kleinen Vorraum. Drei Türen führen in weitere Räume. Zunächst öffnet Ihr die Tür, die gen Rahja führt. Hier befindet sich anscheinend ein Schlafraum. Ein einfaches Lager ist aufgebaut, darüber hinaus gibt es einige Nahrungsmittel. An der hinteren Wand des Raumes steht ein Regal mit einigen Büchern.",
             "follower": {
-                "0": null,
-                "1": null,
+                "0": 34,
+                "1": 54,
 		        "2": null
             },
             "trigger": {
-                "story_control": "end",
-                "inventory": "use|Waffen",
-                "require": "Waffen"
+                "story_control": "run",
+                "inventory": null
             }
-        }
+        },
         "22": {
             "id": "22",
             "name": "Kampf abbrechen",
-            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "text": "“Praios sei Dank, dass ihr zur Vernunft gekommen seid!” Plötzlich wirkt der Mann noch viel gebrechlicher als zuvor.",
             "follower": {
-                "0": null,
-                "1": null,
+                "0": 24,
+                "1": 29,
 		        "2": null
             },
             "trigger": {
-                "story_control": "end",
-                "inventory": "use|Waffen",
-                "require": "Waffen"
+                "story_control": "run",
+                "inventory": null
             }
-        }
+        },
         "23": {
             "id": "23",
             "name": "ihn ansprechen.",
-            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "text": "Als ihr den alten Mann ansprecht, bemerkt er euch. Ein Zucken geht durch seinen Körper, als er euch mit schwacher Stimme willkommen heißt",
             "follower": {
-                "0": null,
-                "1": null,
+                "0": 24,
+                "1": 29,
 		        "2": null
             },
             "trigger": {
-                "story_control": "end",
-                "inventory": "use|Waffen",
-                "require": "Waffen"
+                "story_control": "run",
+                "inventory": null
             }
-        }
+        },
         "24": {
-            "id": "11",
-            "name": "noch auf ein Bier bleiben?",
-            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "id": "24",
+            "name": "hört euch an was er zu sagen hat",
+            "text": "“Kann euch nicht viel sagen... keine Kraft... brauche Hilfe...”. Der Alte flüstert, und immer wieder muss er unterbrechen. “Mein Name ist Derios Graubart, ich bin Magier. Kämpfe gegen einen Dämon. War ein Fehler, ein großer Fehler... habe... keine Kraft mehr... ihn zu bezwingen... kann nur durchhalten... einige Tage hoffentlich... und auf Hilfe hoffen.” Dann wendet er sich von euch ab. Wollt ihr..",
             "follower": {
-                "0": null,
-                "1": null,
+                "0": 28,
+                "1": 42,
 		        "2": null
             },
             "trigger": {
-                "story_control": "end",
-                "inventory": "use|Waffen",
-                "require": "Waffen"
+                "story_control": "run",
+                "inventory": null
             }
-        }
-        "25": {
-            "id": "11",
-            "name": "noch auf ein Bier bleiben?",
-            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
-            "follower": {
-                "0": null,
-                "1": null,
-		        "2": null
-            },
-            "trigger": {
-                "story_control": "end",
-                "inventory": "use|Waffen",
-                "require": "Waffen"
-            }
-        }
+        },
         "26": {
             "id": "26",
             "name": "weiter kämpfen.",
-            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "text": "Der Magier verliert das Bewusstsein, und dann bricht die Hölle los. Plötzlich verwandelt sich der alte Gutshof in ein flammendes Inferno! Ein fieses Lachen ertönt, das direkt aus den Niederhöllen zu kommen scheint. Ihr schickt ein Stoßgebet zu Boron, als euch klar wird, dass ihr einen riesigen Fehler begangen habt. Aber es wird nicht Golgari sein, der euch jetzt holt... Euer Held ein unrühmliches Ende als Dämonen ihn in die Niederhöllen reißen...",
             "follower": {
                 "0": null,
                 "1": null,
@@ -401,8 +379,7 @@
             },
             "trigger": {
                 "story_control": "end",
-                "inventory": "use|Waffen",
-                "require": "Waffen"
+                "inventory": null
             }
         }
         "27": {
@@ -421,8 +398,8 @@
             }
         }
         "28": {
-            "id": "11",
-            "name": "noch auf ein Bier bleiben?",
+            "id": "28",
+            "name": "euch im Raum umsehen",
             "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
             "follower": {
                 "0": null,
@@ -436,8 +413,8 @@
             }
         }
         "29": {
-            "id": "11",
-            "name": "noch auf ein Bier bleiben?",
+            "id": "29",
+            "name": "sucht nach einer Erklärung.",
             "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
             "follower": {
                 "0": null,
@@ -493,9 +470,37 @@
                 "inventory": null
             }
         },
+        "34": {
+            "id": "34",
+            "name": "die Bücher durchsehen",
+            "text": "“Dann lasst mich zumindest Eure Waffe segnen”, meint die Geweihte. Worauf sie eure Waffe segnet, was gegen das untote Gezücht sicherlich nicht schaden kann.",
+            "follower": {
+                "0": 8,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": null
+            }
+        },
         "42": {
             "id": "42",
             "name": "Kehrt nach Ingvalla zurück",
+            "text": "“Dann lasst mich zumindest Eure Waffe segnen”, meint die Geweihte. Worauf sie eure Waffe segnet, was gegen das untote Gezücht sicherlich nicht schaden kann.",
+            "follower": {
+                "0": 8,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": null
+            }
+        },
+        "54": {
+            "id": "54",
+            "name": "nächsten Raum durchsuchen",
             "text": "“Dann lasst mich zumindest Eure Waffe segnen”, meint die Geweihte. Worauf sie eure Waffe segnet, was gegen das untote Gezücht sicherlich nicht schaden kann.",
             "follower": {
                 "0": 8,
