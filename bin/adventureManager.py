@@ -44,6 +44,37 @@ def load_adventure(adventure_name):
         adventure = json.load(myfile)
 
 
+# makes a savegame
+def save_game():
+    data = {}
+    data['name'] = adventure['adventure']['name']
+    data['filename'] = adventure['adventure']['filename']
+    data['chapter'] = str(current_id)
+    data['inventory'] = inventory
+    global savegame
+    savegame = "../save/" + data['name'] + " Chapter " + data['chapter'] + ".json"
+    with open(savegame, 'w') as new_file:
+            json.dump(data, new_file)
+
+
+# load a given adventure
+def load_savegame(file_name):
+    global adventure
+    global inventory
+    filename = "../save/" + file_name + ".json"
+    with open(filename) as myfile:
+        save = json.load(myfile)
+        load_adventure(save['filename'].replace(".json", ""))
+        set_next_chapter(save['chapter'])
+        inventory = save['inventory']
+    print adventure['adventure']['name']
+    print current_id
+    print inventory
+
+
+
+
+
 """getter and setter"""
 # sets the next chapter active, also triggers inventory check
 def set_next_chapter(id):
@@ -110,6 +141,7 @@ def get_adventure_list():
 
 # returns the savegame_list
 def get_savegame_list():
+    print savegame_list
     return tuple(savegame_list)
 
 
@@ -136,8 +168,12 @@ def open_adventures_folder():
     filename = os.path.join(fileDir, '../adventures')
     os.startfile(filename)
 
-load_adventure("adventure1")
-get_chapter_details()
+#init_logic()
+#get_savegame_list()
+#load_adventure("adventure1")
+#load_savegame("Test Adventure 1Chapter6")
+#set_next_chapter(6)
+#save_game()
 #get_follower()
-#set_next_chapter(8)
+
 #do_followers_have_requirements()
