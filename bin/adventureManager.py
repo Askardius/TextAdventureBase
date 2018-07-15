@@ -120,12 +120,17 @@ def do_followers_have_requirements():
     return_list = list()
     story_controle = adventure['adventure']['chapter'][str(current_id)]['trigger']['story_control']
     if "|" in story_controle:
+        follower_ids = get_follower()
         controle_split = story_controle.partition("|")
         if(controle_split[0] == "require"):
-            i = 2
-            while i < len(controle_split):
-                return_list.append(controle_split[i])
+            requirements = controle_split[2].split(",")
+            i = 0
+            y = 0
+            while i < len(requirements):
+                insert_list = [follower_ids[y], requirements[i]]
+                return_list.append(insert_list)
                 i = i + 1
+                y = y + 1
     return return_list
 
 
@@ -197,9 +202,10 @@ def open_adventures_folder():
 
 #init_logic()
 #get_savegame_list()
-#load_adventure("adventure2")
+#load_adventure("adventure1")
 #load_savegame("Test Adventure 1Chapter6")
-#set_next_chapter(6)
+#set_next_chapter(0)
+#get_chapter_details()
 #save_game()
 #get_follower()
 #get_savegame_details("Test Adventure 1Chapter 6")
