@@ -77,7 +77,7 @@ def load_savegame(file_name):
 
 # deletes a savegame
 def delete_savegame(filename):
-    file_path = "../save/" + filename
+    file_path = "../save/" + filename + ".json"
     os.remove(file_path)
     load_all_savegames()
 
@@ -182,6 +182,8 @@ def get_follower():
         follower_list.append(adventure['adventure']['chapter'][str(current_id)]['follower']["2"])
     return follower_list
 
+def get_inventory():
+    return inventory
 
 # returns the name of a given chapter
 def give_chapter_name(id):
@@ -195,7 +197,7 @@ def open_adventures_folder():
 
 #init_logic()
 #get_savegame_list()
-load_adventure("adventure2")
+#load_adventure("adventure2")
 #load_savegame("Test Adventure 1Chapter6")
 #set_next_chapter(6)
 #save_game()

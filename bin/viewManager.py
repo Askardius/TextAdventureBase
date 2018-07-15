@@ -27,6 +27,8 @@ class StarterApp(Tk):
         self.setup_textsize()
         self.switch_frame(StartPage(self))
 
+        init_logic()
+
     def setup_textsize(self):
         global heading_font
         heading_font = tkFont.Font(family=font_type, size=heading_font_size)
@@ -144,14 +146,12 @@ class SelectAdventurePage(ttk.Frame):
         back_button.grid(row=2, sticky = W)
 
         #! This Button need the correct 'command' assignment !#
-        start_button = ttk.Button(content_frame, text = "Start", command=lambda: master.switch_frame(AdventurePage(master, 0, 3, ())))
+        start_button = ttk.Button(content_frame, text = "Start", command=lambda: start_adventure())
         start_button.grid(row=2, sticky = E)
 
         """ ################# """
         """ Logic integration """
         """ ################# """
-
-        #load_all_adventures() #uncomment to test what population looks like - don't use in final version
 
         #using adventureManager method get_adventure_list() to populate listbox
         anames = StringVar(value = get_adventure_list())
@@ -164,6 +164,16 @@ class SelectAdventurePage(ttk.Frame):
         adventure_scrollbar = ttk.Scrollbar(content_frame, orient = VERTICAL, command=adventures_listbox.yview)
         adventures_listbox.configure(yscrollcommand=adventure_scrollbar.set)
         adventure_scrollbar.grid(row = 1, column = 0, sticky = 'ens', pady = 25)
+
+        def start_adventure():
+            index = adventures_listbox.curselection()
+            if not index:
+                None
+            else:
+                adventure_name = adventures_listbox.get(index[0])
+                load_adventure(adventure_name)
+                set_next_chapter(0)
+                master.switch_frame(AdventurePage(master))
 
 
 """savegame selection view"""
@@ -203,13 +213,12 @@ class SelectSavegamePage(ttk.Frame):
         back_button = ttk.Button(content_frame, text = 'Back', command=lambda: master.switch_frame(StartPage(master)))
         back_button.grid(row=2, sticky = W)
 
-        delete_button = ttk.Button(content_frame, text = 'Delete', command=lambda: delete_savegame())
+        delete_button = ttk.Button(content_frame, text = 'Delete', command=lambda: delete_selected_savegame())
         delete_button.grid(row=2)
 
-        load_button = ttk.Button(content_frame, text = 'Load', command=lambda: load_savegame())
+        load_button = ttk.Button(content_frame, text = 'Load', command=lambda: load_selected_savegame())
         load_button.grid(row=2, sticky = E)
 
-        #load_all_savegames() #uncomment to test what population looks like - don't use in final version
 
         """ ################# """
         """ Logic integration """
@@ -231,22 +240,24 @@ class SelectSavegamePage(ttk.Frame):
         '''button functionality'''
 
         #savegame-load functionality for button
-        def load_savegame():
+        def load_selected_savegame():
             index = savegames_listbox.curselection()
             if not index:
                 None
             else:
-                #savegame_information = get_savegame_information(index[0]) #list which contains chapter, followers and an inventory_list
-                master.switch_frame(AdventurePage(master, adventure_Name, chapter, )) #starts adventure with savegame parameters
+                savegame_name = savegames_listbox.get(index[0])
+                load_savegame(savegame_name) #function from adventureManager
+                master.switch_frame(AdventurePage(master))
 
-        def delete_savegame():
+        def delete_selected_savegame():
             index = savegames_listbox.curselection()
             if not index:
                 None
             else:
                 if messagebox.askyesno(message='Wollen Sie den Spielstand entgueltig loeschen?') is True:
-                    #delete_savegame(index[0]) #uses adventureManager function
-                    master.switch_frame(SelectSavegamePage(master)) #correct parameters for loading have to be inserted from adventureManager
+                    savegame_name = savegames_listbox.get(index[0])
+                    delete_savegame(savegame_name)
+                    #update_lists
 
 
 """Adventure view"""
@@ -254,18 +265,10 @@ class SelectSavegamePage(ttk.Frame):
 
 class AdventurePage(ttk.Frame):
 
-    def __init__(self, master, adventure_Name, chapter, inventory_list):
+    def __init__(self, master):
         ttk.Frame.__init__(self, master)
 
-        #get information about current chapter
-        #chapter_information = get_chapter_information(adventure_Name, chapter)#uses adventureManager method to get Container
-
-        #store information about current chapter
-        #self.followers = chapter_information["followers"]
-        #if not inventory_list:
-        #    self.inventory_list = chapter_information["inventory_list"]
-        #else:
-        #    self.inventory_list = inventory_list
+        self.follower = get_follower()
 
         """ ########### """
         """ GUI aspects """
@@ -311,33 +314,17 @@ class AdventurePage(ttk.Frame):
         option_three_frame.grid(row=4, column = 1, pady = 20)
 
         """button creation"""
+        if len(self.follower) >= 1:
+            option_one_button = ttk.Button(option_one_frame, text="Test1", style = 'my.TButton', command=lambda: progress_in_story(self.follower[0]))
+            option_one_button.pack(expand = 1, fill = BOTH)
 
-        next_chapter_name = "Test" #only for test reaons, delete line in final product
+        if len(self.follower) >= 2:
+            option_two_button = ttk.Button(option_two_frame, text="Test2", style = 'my.TButton', command=lambda: progress_in_story(self.follower[1]))
+            option_two_button.pack(expand = 1, fill = BOTH)
 
-        #creates buttons depending on number of followers and deactivates buttons where necessary item isn't in inventory
-        #if followers > 0:
-
-            #following_event_information = get_chapter_information(adventure_name, followers[0])
-            #next_chapter_id = following_event_information['chapter_id']
-            #next_chapter_name = following_event_information['chapter_name']
-
-        option_one_button = ttk.Button(option_one_frame, text=next_chapter_name, #name of chapter equals decision description
-                                    style = 'my.TButton')   #add command=lambda: progress_in_story(next_chapter_id)
-        option_one_button.pack(expand = 1, fill = BOTH)
-
-        #if followers >= 1:
-
-            #following_event_information = get_chapter_information(adventure_name, followers[1])
-            #next_chapter_id = following_event_information['chapter_id']
-            #next_chapter_name = following_event_information['chapter_name']
-
-        option_two_button = ttk.Button(option_two_frame, text=next_chapter_name, style = 'my.TButton') #add command=lambda: progress_in_story(next_chapter_id)
-        option_two_button.pack(expand = 1, fill = BOTH)
-
-        #if followers == 2:
-        option_three_button = ttk.Button(option_three_frame, text=next_chapter_name, style = 'my.TButton') #add command=lambda: progress_in_story(next_chapter_id)
-        option_three_button.pack(expand = 1, fill = BOTH)
-
+        if len(self.follower) >= 3:
+            option_three_button = ttk.Button(option_three_frame, text="Test3", style = 'my.TButton', command=lambda: progress_in_story(self.follower[2]))
+            option_three_button.pack(expand = 1, fill = BOTH)
 
         """setting up inner widgets"""
         # setting up inner widgets and assigning them to the already created frames
@@ -358,7 +345,7 @@ class AdventurePage(ttk.Frame):
         """ ################# """
 
 
-        inames = StringVar(value = inventory_list)
+        inames = StringVar(value = tuple(get_inventory()))
 
         inventory_listbox = Listbox(inventory_list_frame, listvariable = inames, font = small_font)
         inventory_listbox.pack(expand = True, fill = BOTH)
@@ -372,9 +359,7 @@ class AdventurePage(ttk.Frame):
         inventory_x_scrollbar.grid(row = 12, column = 0, sticky = 'swe')
 
         #create and populate textfield
-        adventure_text = Text(text_frame, width = 40, height = 10, wrap = 'word', font = small_font)
-        adventure_text.insert('1.0', 'Test')
-        adventure_text.config(state=DISABLED)
+        adventure_text = Text(text_frame, width = 40, height = 10, wrap = 'word', font = small_font, state = DISABLED)
         adventure_text.pack(expand = True, fill = BOTH)
 
         #creating scrollbar and assigning it to textfield
@@ -382,15 +367,19 @@ class AdventurePage(ttk.Frame):
         adventure_text.configure(yscrollcommand=adventure_scrollbar.set)
         adventure_scrollbar.grid(row = 0, column = 1, sticky = 'ens')
 
+        adventure_text['state'] = 'normal'
+        adventure_text.delete('1.0', '2.0')
+        adventure_text.insert('1.0', get_chapter_text())
+        adventure_text['state'] = 'disabled'
+
         #handles next step in adventure -> inventory handling should be moved to adventureManager
-        def progress_in_story(next_chapter_id):
-            update_inventory(next_chapter_id) #calls adventureManager function
-            master.switch_frame(AdventurePage(master, adventure_Name, next_chapter_id, None))
+        def progress_in_story(next_chapter):
+            set_next_chapter(next_chapter)
+            master.switch_frame(AdventurePage(master))
 
         #for save button
         def save_progress(): #use adventure_name, chapter, inventory_list as parameters
-            #try:
-                #save_adventure(adventure_name, chapter, inventory_list) #use method from adventureManager
+            save_game()
             messagebox.showinfo('game saved', 'Das Spiel wurde gespeichert')
 
         #for exit button
