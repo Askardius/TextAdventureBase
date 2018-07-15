@@ -20,7 +20,7 @@ def init_logic():
 # loads all adventures from the adventures directory
 def load_all_adventures():
     global adventure_list
-    names = os.listdir("adventures")
+    names = os.listdir("../adventures")
     for filename in names:
         adventure_list.append(filename[0:-5])
     print adventure_list
@@ -29,7 +29,7 @@ def load_all_adventures():
 # load all savegames from the save directory
 def load_all_savegames():
     global savegame_list
-    saves = os.listdir("save")
+    saves = os.listdir("../save")
     for filename in saves:
         savegame_list.append(filename[0:-5])
     print savegame_list
@@ -48,12 +48,12 @@ def load_adventure(adventure_name):
 """getter and setter"""
 # returns the adventure_list
 def get_adventure_list():
-    return adventure_list
+    return tuple(adventure_list)
 
 
 # returns the savegame_list
 def get_savegame_list():
-    return savegame_list
+    return tuple(savegame_list)
 
 
 # give the actual chapter text
@@ -63,3 +63,10 @@ def get_chapter_text():
 # give the actual chapters follower
 def get_follower():
     return adventure['adventure']['chapter'][current_id]['follower'];
+
+
+"""others"""
+def open_adventures_folder():
+    fileDir = os.path.dirname(os.path.realpath('__file__'))
+    filename = os.path.join(fileDir, '../adventures')
+    os.startfile(filename)
