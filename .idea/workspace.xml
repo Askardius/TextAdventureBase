@@ -16,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="adventureManager.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adventureManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/adventureManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="129" column="64" selection-start-line="129" selection-start-column="64" selection-end-line="129" selection-end-column="64" />
+            <state relative-caret-position="437">
+              <caret line="211" column="1" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
               <folding>
                 <element signature="e#105#116#0" expanded="true" />
               </folding>
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fluch_von_ingvalla.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fluch_von_ingvalla.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adventures/fluch_von_ingvalla.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+            <state relative-caret-position="260">
+              <caret line="261" column="141" selection-start-line="261" selection-start-column="141" selection-end-line="261" selection-end-column="141" />
             </state>
           </provider>
         </entry>
@@ -52,7 +52,7 @@
       <file leaf-file-name="adventure1.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adventures/adventure1.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-238">
+            <state relative-caret-position="110">
               <caret line="136" column="42" selection-start-line="136" selection-start-column="42" selection-end-line="136" selection-end-column="42" />
             </state>
           </provider>
@@ -84,8 +84,8 @@
         <option value="$PROJECT_DIR$/bin/viewManager.py" />
         <option value="$PROJECT_DIR$/core.py" />
         <option value="$PROJECT_DIR$/adventures/adventure1.json" />
-        <option value="$PROJECT_DIR$/adventures/fluch_von_ingvalla.json" />
         <option value="$PROJECT_DIR$/bin/adventureManager.py" />
+        <option value="$PROJECT_DIR$/adventures/fluch_von_ingvalla.json" />
       </list>
     </option>
   </component>
@@ -99,8 +99,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
+    <option name="x" value="527" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -388,13 +387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adventures/fluch_von_ingvalla.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -408,20 +400,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/adventureManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="211" column="1" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
+          <folding>
+            <element signature="e#105#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/adventures/adventure1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
+        <state relative-caret-position="110">
           <caret line="136" column="42" selection-start-line="136" selection-start-column="42" selection-end-line="136" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/adventureManager.py">
+    <entry file="file://$PROJECT_DIR$/adventures/fluch_von_ingvalla.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="129" column="64" selection-start-line="129" selection-start-column="64" selection-end-line="129" selection-end-column="64" />
-          <folding>
-            <element signature="e#105#116#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="260">
+          <caret line="261" column="141" selection-start-line="261" selection-start-column="141" selection-end-line="261" selection-end-column="141" />
         </state>
       </provider>
     </entry>

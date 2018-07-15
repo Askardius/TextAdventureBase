@@ -37,10 +37,10 @@
         "3": {
             "id": "3",
             "name": "“Lasst uns in ein Wirtshaus gehen, und erzählt mir, worum es geht.”",
-            "text": "Da sie gehört hatten, das Hexen meist in leckeren essbaren Häusern wohnen und ziemliche Schätze hatten, beschlossen sie die alte Hexe zu besuchen. Sie gingen fast einen halben Tag immer weiter in den Wald. Als plötzlich ein kleines Männchen am Wegesrand stand.",
+            "text": "In der Schänke “Zum trunkenen Ork” erzählt euch der Jüngling, in welcher Lage sich Ingvalla befindet: “Gen Praios­Efferd von Ingvalla aus befinden sich die Sümpfe von Lyckmoor. Diese werden schon seit langem von abscheulichen Kreaturen, wandelnden Leichen und Skeletten bevölkert. Doch neuerdings dringen sie nachts bis in unser Dorf vor! Früher hätten sie das nie gewagt. Die Bewohner des Dorfes sind verängstigt. Sie haben Angst um Hab und Gut, um ihr Vieh, aber noch mehr um ihr Leben. Wir glauben, dass irgend etwas dort in den Sümpfen vorgeht, wissen allerdings nicht, was. Jemand muss herausfinden, was es mit der Plage auf sich hat, und sie beseitigen. Könnt Ihr euch der Sache annehmen? Wir werden euch auch dafür belohnen. Zwar haben wir nicht viel, aber uns wird schon etwas einfallen.",
             "follower": {
-                "0": 3,
-                "1": 4,
+                "0": 5,
+                "1": 4.5,
                 "2": null
             },
             "trigger": {
@@ -52,67 +52,67 @@
         "4": {
             "id": "4",
             "name": "Morgen ist Immanspiel, da kann ich hier nicht weg.",
-            "text": "Da der kleine Kerl aussieht wie ein Kinderschänder auf Freigang, ignoriert ihr ihn und marschiert weiter den Weg entlang",
+            "text": "Enttäuscht wendet der junge Thorwaler sich von Euch ab. Besonders heldenhaft scheint Ihr ja nicht zu sein...",
             "follower": {
-                "0": 5,
+                "0": null,
                 "1": null,
                 "2": null
             },
             "trigger": {
-                "story_control": "run",
+                "story_control": "end",
                 "inventory": null,
                 "require": null
             }
         },
-        "4": {
+        "4.5": {
             "id": "4",
-            "name": "ihr geht auf den Kerl zu",
-            "text": "Auch wenn er etwas seltsam aussieht, geht ihr auf den Kerl zu. Er öffnet seinen langen Mantel, doch statt eines Exibitionisten, handelt es sich bei der Gestalt um einen Schwarzmarkt Händler. Er grinst breit und fängt dann an zu sprechen. 'Braucht ihr Zeug? Ich hab alles! Drogen, Pornos, Waffen. Was wollt ihr? Leider habt ihr nur genug Kohle für eins der Dinge.",
+            "name": "“Ich befürchte, das ist eine Nummer zu groß fürmich.”",
+            "text": "Enttäuscht wendet der junge Thorwaler sich von Euch ab. Besonders heldenhaft scheint Ihr ja nicht zu sein...",
             "follower": {
-                "0": 5,
-                "1": 6,
-		        "2": 7
+                "0": null,
+                "1": null,
+		        "2": null
             },
             "trigger": {
-                "story_control": "run",
+                "story_control": "end",
                 "inventory": null,
                 "require": null
             }
         },
         "5": {
             "id": "5",
-            "name": "Kauft euch Drogen",
-            "text": "Ihr beschließt, dass es eine super Idee wäre, euch Drogen zu kaufen, damit ihr euch bei der Hexe dann richtig zudröhnen könnt.",
+            "name": "“Ja, lasst uns sofort aufbrechen.”",
+            "text": "Ihr brecht noch am selben Abend gen Süden auf. Janske hat zwei Reittiere dabei, so dass Ihr zu Pferd reisen könnt. Die Reise verläuft ohne Zwischenfälle, und am Abend des zweiten Tages erreicht Ihr das Dorf. Janske steuert den Swafnirtempel an. “Bei Einbruch der Dunkelheit zieht sich ein Großteil der Bevölkerung in den Tempel zurück. Es ist der sicherste Ort hier. Jeweils drei Männer halten Wache, falls sich doch eine der Kreaturen in die Nähe wagen sollte”, erklärt euch Janske. Reichlich notdürftige Schlafstätten sind im Tempel aufgebaut, ebenfalls befinden sich bereits einige Menschen dort. Ihr werdet sofort von einem kräftigen Mann begrüßt, der sich Euch als Hetmann Starkad Bjarnhildson vorstellt. “Letzte Nacht waren sie wieder hier”, meint er zu Janske. “Sie haben sich aber nicht in den Tempel gewagt. Ansonsten ist Tjalf Norhildson, der Skalde, gestern hier eingetroffen. Er war in der Nähe der Sümpfe unterwegs, und behauptet, im alten Gutshof würde jemand wohnen. Ihr solltet mit ihm reden. ",
             "follower": {
-                "0": 8,
+                "0": 6,
                 "1": null,
 		        "2": null
             },
             "trigger": {
                 "story_control": "run",
-                "inventory": "add|Drogen",
+                "inventory": null,
                 "require": null
             }
         },
         "6": {
             "id": "6",
-            "name": "Kauft Pornos",
-            "text": "Noch bevor Gretel etwas sagen kann, hat sich Hänsel für einen Stapel Pornohefte entschieden. Ihr wisst zwar nicht so genau, wofür ihr die braucht bei der Hexe, aber Hänsel erläutert, dass man Pornos immer brauchen kann.",
+            "name": "Er ist noch im Schnapskeller",
+            "text": "Torebrands Schnapskeller, eine der beiden Tavernen im Ort, ist ziemlich gut gefüllt, was wohl hauptsächlich an dem Skalden liegt, der gerade ein Lied vorträgt. Tjalf Norhildsson ist ein dünner Mann von etwa fünfzig Jahren, mit langem rotem Haar, das er zu zwei Zöpfen geflochten hat. Nachdem er mit seinem Lied fertig ist, erzählt er euch, dass er hier geboren ist, und gestern aus Richtung Nostria angekommen. Auf der Reise hierher sei er an einem alten Gutshof vorbeigekommen, der eigentlich schon seit Ewigkeiten nicht mehr bewohnt wird. Aber ihm sei aufgefallen, dass jemand die alte, morsche Tür, durch eine neue ersetzt haben muss. Wollt ihr...",
             "follower": {
-                "0": 8,
-                "1": null,
+                "0": 11,
+                "1": 7,
 		        "2": null
             },
             "trigger": {
                 "story_control": "run",
-                "inventory": "add|Pornos",
+                "inventory": null,
                 "require": null
             }
         },
         "7": {
             "id": "7",
-            "name": "Kauft euch Waffen",
-            "text": "Da ihr der Meinung seid, dass die Hexe sicherlich nicht freiwillig das Feld räumen wird, nehmt ihr für Hänsel eine schicke Shotgun und für Gretel hat der freundliche Händler einen schnuckeligen Revolver.",
+            "name": "in den Tempel zurückkehren",
+            "text": "Im Tempel findet Ihr wie erwartet noch mehr Menschen vor, als bei eurer Ankunft in Ingvalla. Der Hetmann ist nicht zu sehen, aber eine junge Frau kommt auf euch zu, und stellt sich als Hjelgira Torfinnsdottir vor. Sie sei die örtliche Swafnirgeweihte. ",
             "follower": {
                 "0": 8,
                 "1": null,
@@ -126,38 +126,98 @@
         },
         "8": {
             "id": "8",
-            "name": "Geht weiter zur Hexe",
-            "text": "Kurz vor Sonnenuntergang kommt ihr bei einem tollen Haus aus Lebkuchen und anderen Leckereien an. Vor dem Haus steht eine runzlige Alte die schon auf euch gewartet hat. ",
+            "name": "Weiter",
+            "text": "Worüber wollt ihr mit Hjelgira reden?",
             "follower": {
-                "0": 9,
-                "1": 10,
-		        "2": 11
+                "0": 12,
+                "1": 13,
+		        "2": 9
             },
             "trigger": {
-                "story_control": "require|Waffen,Drogen, Pornos",
+                "story_control": "run",
                 "inventory": null,
                 "require": null
             }
         },
         "9": {
             "id": "9",
-            "name": "Werft euch die Drogen ein",
-            "text": "Ihr werft euch die Drogen ein und werdet tierisch high. Das sorgt leider auch dafür, dass ihr nur dümmlich lacht als die Hexe euch problemlos überwältigt und an einen großen Spieß bindet. Anschließend schürt sie ein großes Feuer an und brät euch am Spieß darüber schön knusprig. Aber zumindest hattet ihr was zu lachen, bis ihr gut durch wart. ENDE",
+            "name": "Oder wollt ihr euch schlafen legen?",
+            "text": "Ihr legt euch schlafen, werdet aber in der Nacht von Kampfeslärm geweckt! Ihr stürmt nach draußen, und seht, dass gerade einige kräftige Männer mit mehreren Untoten kämpfen. Sobald ihr den Tempel verlassen habt stürzt sich ein Zombie auch auf Euch!",
             "follower": {
-                "0": null,
-                "1": null,
+                "0": 10,
+                "1": 14,
 		        "2": null
             },
             "trigger": {
-                "story_control": "end",
-                "inventory": "remove|Drogen",
-                "require": "Drogen"
+                "story_control": "run",
+                "inventory": null,
+                "require": null
             }
         },
         "10": {
             "id": "10",
-            "name": "Holt die Pornos raus",
-            "text": "Hänsel holt die Pornos aus dem Rucksack, was die Hexe erst einmal sehr verwirrt. Gretel, die das ziemlich dämlich findet, verbündete sich mit der Hexe. Zusammen werfen sie Hänsel in einen Käfig, wo dieser noch masturbierend für ein paar Tage sitzt bis er gegrillt wird. Die Hexe macht Gretel zu ihrem Lehrling und zusammen verspeisen sie in Zukunft gemeinsam Kinder. ENDE",
+            "name": "Werft euch heldenhaft in den Kampf",
+            "text": "Mit einigen heftigen Hieben streckt ihr den Untoten nieder. Auch die anderen Kämpfer haben es mittlerweile geschafft, die Untoten zu besiegen. Einige der Wesen liegen tot auf dem Boden, andere fliehen. Für euch gibt es erstmal nichts zu tun. Ihr legt euch wieder zur Ruhe, schlaft erstaulich gut, und regeneriert in der Nacht 1W+3 Lebenspunkte. Am nächsten Morgen brecht Ihr in Richtung des alten Gutshofes auf... ",
+            "follower": {
+                "0": 18,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": null,
+                "require": null
+            }
+        },
+        "11": {
+            "id": "11",
+            "name": "noch auf ein Bier bleiben?",
+            "text": "Ihr bleibt noch ein Weilchen im Schnapskeller, trinkt noch das ein oder andere Bier, und unterhaltet euch mit den Anwesenden. Ihr erfahrt, dass die Kneipe nach Torebrand, dem Vater von Hjalla Baernhildsdottir, einer großen Heldin des Ortes, benannt ist, der früher in diesem Haus gewohnt hat. Doch schon bald verlassen die Gäste das Lokal, und ihr entscheidet euch, auch in den Tempel zurückzugehen.",
+            "follower": {
+                "0": 7,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": "add|Info: Hjalla",
+                "require": null
+            }
+        },
+        "12": {
+            "id": "12",
+            "name": "Was wisst Ihr über den alten Gutshof?",
+            "text": "“Der alte Gutshof... ja, der liegt am Rand der Sümpfe, deshalb wird er schon seit Hyggeliks Zeiten nicht mehr bewohnt. Es war auch lange niemand mehr dort, bis auf Tjalf gestern. Dort treiben sich ja bekanntlich die wandelnden Leichen herum, und zwar schon immer. Übrigens, jetzt wo Ihr danach fragt... vor einiger Zeit hat sich schon einmal jemand nach dem Hof erkundigt, ein älterer Mann. Ist aber schon einige Jahre her!”",
+            "follower": {
+                "0": 8,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": null,
+                "require": null
+            }
+        },
+        "13": {
+            "id": "13",
+            "name": "Was war damals mit Hjalla Baernhildsdotir?",
+            "text": "“Hjalla war damals eine junge Frau. Sie hat eine Menge dieser Wesen aus den Sümpfen mit ihrer Axt erschlagen – aber lasst euch die Geschichte lieber von Tjalf erzählen. Hjallas Axt wird seitdem hier im Tempel aufbewahrt, und es heisst, die Wesen hätten immer noch Angst vor ihr. Wenn Ihr wollt kann ich sie euch leihen, damit Ihr uns helfen könnt.” Wollt ihr...",
+            "follower": {
+                "0": 31,
+                "1": 32,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "require|Info: Hjalla",
+                "inventory": null,
+                "require": null
+            }
+        },
+        "14": {
+            "id": "14",
+            "name": "Versucht feige in den Tempel zurück zu rennen",
+            "text": "Doch der Zombie ist schneller und wirft euch zu Boden. Unaufhörlich prasseln seine Fäuste auf euch ein, dann verliert Euer Held das Bewusstsein, und Euch bleibt nur zu hoffen, dass er von Golgari geholt wird...",
             "follower": {
                 "0": null,
                 "1": null,
@@ -165,13 +225,54 @@
             },
             "trigger": {
                 "story_control": "end",
-                "inventory": "use|Pornos",
-                "require": "Pornos"
+                "inventory": null
             }
         },
-        "11": {
+        "15": {
             "id": "11",
-            "name": "Zückt die Waffen und mäht die Hexe um",
+            "name": "noch auf ein Bier bleiben?",
+            "text": "In dem Raum befindet sich ein alter Mann, wohl um die sechzig Sommer mag er zählen. Ein Thorwaler scheint er nicht zu sein, ihr schätzt seine Größe auf etwa 165 Halbfinger. Seine Haare sind, genau wie sein Bart, lang und schon deutlich ergraut. Aufgrund des Stabes, den er trägt, schließt ihr, dass er wohl ein Magier ist. Er sitzt auf einem Schemel und scheint angestrengt nachzudenken. Auf Euer Eintreten reagiert er zunächst nicht. Ansonsten befindet sich noch ein Tisch im Raum. Einige erloschene Kerzen stehen auf dem Steinboden. Wollt Ihr...",
+            "follower": {
+                "0": 19,
+                "1": 23,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": null
+            }
+        },
+        "16": {
+            "id": "16",
+            "name": "noch auf ein Bier bleiben?",
+            "text": "“Gustavo, mein alter Lehrmeister, hat den Verstand verloren. Ich bin nicht mächtig genug, es mit ihm aufzunehmen, werde also gezwungen sein, mir Hilfe zu holen. Alles ist vorbereitet für das Ritual. Ich hoffe, dass alles gelingt... Leichen zu erwecken, und einen Dämon zu beschwören, das ist doch ein gewaltiger Unterschied...”",
+            "follower": {
+                "0": 42,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": null
+            }
+        },
+        "17": {
+            "id": "11",
+            "name": "noch auf ein Bier bleiben?",
+            "text": "Der Magier wehrt sich nur halbherzig, wirkt keinerlei Zauber, und bittet euch immer wieder um Nachsicht. Sehr seltsam...",
+            "follower": {
+                "0": 22,
+                "1": 26,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": null
+            }
+        },
+        "18": {
+            "id": "11",
+            "name": "noch auf ein Bier bleiben?",
             "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
             "follower": {
                 "0": null,
@@ -182,6 +283,228 @@
                 "story_control": "end",
                 "inventory": "use|Waffen",
                 "require": "Waffen"
+            }
+        }
+        "19": {
+            "id": "19",
+            "name": "den Mann angreifen.",
+            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": "use|Waffen",
+                "require": "Waffen"
+            }
+        }
+        "20": {
+            "id": "11",
+            "name": "noch auf ein Bier bleiben?",
+            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": "use|Waffen",
+                "require": "Waffen"
+            }
+        }
+        "21": {
+            "id": "11",
+            "name": "noch auf ein Bier bleiben?",
+            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": "use|Waffen",
+                "require": "Waffen"
+            }
+        }
+        "22": {
+            "id": "22",
+            "name": "Kampf abbrechen",
+            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": "use|Waffen",
+                "require": "Waffen"
+            }
+        }
+        "23": {
+            "id": "23",
+            "name": "ihn ansprechen.",
+            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": "use|Waffen",
+                "require": "Waffen"
+            }
+        }
+        "24": {
+            "id": "11",
+            "name": "noch auf ein Bier bleiben?",
+            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": "use|Waffen",
+                "require": "Waffen"
+            }
+        }
+        "25": {
+            "id": "11",
+            "name": "noch auf ein Bier bleiben?",
+            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": "use|Waffen",
+                "require": "Waffen"
+            }
+        }
+        "26": {
+            "id": "26",
+            "name": "weiter kämpfen.",
+            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": "use|Waffen",
+                "require": "Waffen"
+            }
+        }
+        "27": {
+            "id": "11",
+            "name": "noch auf ein Bier bleiben?",
+            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": "use|Waffen",
+                "require": "Waffen"
+            }
+        }
+        "28": {
+            "id": "11",
+            "name": "noch auf ein Bier bleiben?",
+            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": "use|Waffen",
+                "require": "Waffen"
+            }
+        }
+        "29": {
+            "id": "11",
+            "name": "noch auf ein Bier bleiben?",
+            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": "use|Waffen",
+                "require": "Waffen"
+            }
+        }
+        "30": {
+            "id": "11",
+            "name": "noch auf ein Bier bleiben?",
+            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": "use|Waffen",
+                "require": "Waffen"
+            }
+        }
+        "31": {
+            "id": "31",
+            "name": "das Angebot annehmen?",
+            "text": "Die Axt ist ein schönes Stück Handwerkskunst und ihr habt das Gefühl ein leichtes Glimmen gehe von den eingravierten Runen aus.",
+            "follower": {
+                "0": 8,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": "add|Hjallas Axt"
+            }
+        },
+        "32": {
+            "id": "31",
+            "name": "oder verwendet Ihr lieber Eure eigene Waffe?",
+            "text": "“Dann lasst mich zumindest Eure Waffe segnen”, meint die Geweihte. Worauf sie eure Waffe segnet, was gegen das untote Gezücht sicherlich nicht schaden kann.",
+            "follower": {
+                "0": 8,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": null
+            }
+        },
+        "42": {
+            "id": "42",
+            "name": "Kehrt nach Ingvalla zurück",
+            "text": "“Dann lasst mich zumindest Eure Waffe segnen”, meint die Geweihte. Worauf sie eure Waffe segnet, was gegen das untote Gezücht sicherlich nicht schaden kann.",
+            "follower": {
+                "0": 8,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": null
             }
         }
     }
