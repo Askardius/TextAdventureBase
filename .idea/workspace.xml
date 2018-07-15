@@ -11,7 +11,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Endprojekt$viewManager.coverage" NAME="viewManager Coverage Results" MODIFIED="1531656185180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bin" />
-    <SUITE FILE_PATH="coverage/Endprojekt$adventureManager.coverage" NAME="adventureManager Coverage Results" MODIFIED="1531661636227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bin" />
+    <SUITE FILE_PATH="coverage/Endprojekt$adventureManager.coverage" NAME="adventureManager Coverage Results" MODIFIED="1531662904358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bin" />
     <SUITE FILE_PATH="coverage/Endprojekt$core.coverage" NAME="core Coverage Results" MODIFIED="1531659902666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -19,8 +19,8 @@
       <file leaf-file-name="adventureManager.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/adventureManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+            <state relative-caret-position="974">
+              <caret line="121" column="32" selection-start-line="121" selection-start-column="32" selection-end-line="121" selection-end-column="32" />
               <folding>
                 <element signature="e#105#116#0" expanded="true" />
               </folding>
@@ -48,8 +48,8 @@
       <file leaf-file-name="adventure1.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adventures/adventure1.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-927">
-              <caret line="78" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
+            <state relative-caret-position="-281">
+              <caret line="134" column="33" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -73,9 +73,9 @@
         <option value="$PROJECT_DIR$/logicControler.py" />
         <option value="$PROJECT_DIR$/bin/logicControler.py" />
         <option value="$PROJECT_DIR$/bin/viewManager.py" />
-        <option value="$PROJECT_DIR$/adventures/adventure1.json" />
         <option value="$PROJECT_DIR$/core.py" />
         <option value="$PROJECT_DIR$/bin/adventureManager.py" />
+        <option value="$PROJECT_DIR$/adventures/adventure1.json" />
       </list>
     </option>
   </component>
@@ -388,15 +388,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adventures/adventure1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-927">
-          <caret line="78" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
+        <state relative-caret-position="-281">
+          <caret line="134" column="33" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/adventureManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+        <state relative-caret-position="974">
+          <caret line="121" column="32" selection-start-line="121" selection-start-column="32" selection-end-line="121" selection-end-column="32" />
           <folding>
             <element signature="e#105#116#0" expanded="true" />
           </folding>

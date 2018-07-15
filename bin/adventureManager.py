@@ -44,6 +44,7 @@ def load_adventure(adventure_name):
         adventure = json.load(myfile)
 
 
+"""getter and setter"""
 # sets the next chapter active, also triggers inventory check
 def set_next_chapter(id):
     global current_id
@@ -74,8 +75,24 @@ def check_inventory_for(item):
             answer = True
     return answer
 
-"""getter and setter"""
-# returns the adventure_list
+
+# returns requirements for next chapters, if none returnes list is empty
+def do_followers_have_requirements():
+    global return_list
+    return_list = list()
+    story_controle = adventure['adventure']['chapter'][str(current_id)]['trigger']['story_control']
+    if "|" in story_controle:
+        controle_split = story_controle.partition("|")
+        if(controle_split[0] == "require"):
+            i = 2
+            while i < len(controle_split):
+                return_list.append(controle_split[i])
+                i = i + 1
+    print return_list
+    return return_list
+
+
+            # returns the adventure_list
 def get_adventure_list():
     return tuple(adventure_list)
 
@@ -100,3 +117,6 @@ def open_adventures_folder():
     filename = os.path.join(fileDir, '../adventures')
     os.startfile(filename)
 
+#load_adventure("adventure1")
+#set_next_chapter(8)
+#do_followers_have_requirements()

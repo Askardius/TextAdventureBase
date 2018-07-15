@@ -131,8 +131,8 @@
 		        "2": 11
             },
             "trigger": {
-                "story_control": "use|Waffen,Drogen, Pornos",
-                "inventory": "add|Drogen",
+                "story_control": "require|Waffen,Drogen, Pornos",
+                "inventory": null,
                 "require": null
             }
         },
