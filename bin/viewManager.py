@@ -12,6 +12,7 @@ button_height = 100
 button_font_size = 24
 heading_font_size = 36
 small_fontsize = 16
+tiny_fontsize = 8
 font_type = 'Helvetica'
 
 global heading_font
@@ -34,9 +35,12 @@ class StarterApp(Tk):
         heading_font = tkFont.Font(family=font_type, size=heading_font_size)
         global small_font
         small_font = tkFont.Font(family=font_type, size = small_fontsize)
+        tiny_font = tkFont.Font(family=font_type, size=tiny_fontsize)
         #https://stackoverflow.com/questions/37068708/how-to-change-font-size-in-ttk-button
         s = ttk.Style()
-        s.configure('my.TButton', font =(font_type, button_font_size))
+        s.configure('big.TButton', font =(font_type, button_font_size))
+        s.configure('small.TButton', font=small_font)
+        s.configure('tiny.Button', font = tiny_font)
 
     def switch_frame(self, frame):
         """Destroys current frame and replaces it with a new one."""
@@ -92,17 +96,17 @@ class StartPage(ttk.Frame):
         heading_label.pack(expand = True)
 
         #redirects to SelectAdventurePage
-        select_adventure_button = ttk.Button(select_adventure_frame, text="Select Adventure", style = 'my.TButton',
+        select_adventure_button = ttk.Button(select_adventure_frame, text="Select Adventure", style = 'big.TButton',
                                   command=lambda: master.switch_frame(SelectAdventurePage(master)))
         select_adventure_button.pack(expand = 1, fill = BOTH)
 
         #redirects to SelectSavegamePage
-        load_savegame_button = ttk.Button(load_savegame_frame, text="Load Savegame", style = 'my.TButton',
+        load_savegame_button = ttk.Button(load_savegame_frame, text="Load Savegame", style = 'big.TButton',
                                   command=lambda: master.switch_frame(SelectSavegamePage(master)))
         load_savegame_button.pack(expand = 1, fill = BOTH)
 
         #import button opens adventures folder in explorer by using open_adventures_folder() method from adventureManager
-        import_adventure_button = ttk.Button(import_adventure_frame, text="Import Adventure", style = 'my.TButton',
+        import_adventure_button = ttk.Button(import_adventure_frame, text="Import Adventure", style = 'big.TButton',
                                   command=lambda: open_adventures_folder())
         import_adventure_button.pack(expand = 1, fill = BOTH)
 
@@ -158,6 +162,7 @@ class SelectAdventurePage(ttk.Frame):
 
         #create and populate listbox
         adventures_listbox = Listbox(adventures_frame, listvariable = anames, font = small_font, selectmode = SINGLE)
+        adventures_listbox.bind('<Double-1>', lambda x: start_button.invoke())
         adventures_listbox.pack(expand = True, fill = BOTH)
 
         #creating scrollbar and assigning it to listbox
@@ -169,11 +174,15 @@ class SelectAdventurePage(ttk.Frame):
             index = adventures_listbox.curselection()
             if not index:
                 None
+                #if no element is selected to nothing
             else:
                 adventure_name = adventures_listbox.get(index[0])
-                load_adventure(adventure_name)
-                set_next_chapter(0)
-                master.switch_frame(AdventurePage(master))
+                if load_adventure(adventure_name) is not None:
+                    messagebox.showinfo("Error", load_adventure(adventure_name))
+                else:
+                    load_adventure(adventure_name) #passes the name of the adventure to adventureManager
+                    set_next_chapter(0) #tells adventureManager to start at beginning
+                    master.switch_frame(AdventurePage(master))
 
 
 """savegame selection view"""
@@ -224,12 +233,12 @@ class SelectSavegamePage(ttk.Frame):
         """ Logic integration """
         """ ################# """
 
-        #create and populate Listbox and add Scrollbar
-
         #using adventureManager method get_savegame_list() to polulate listbox
         snames = StringVar(value = get_savegame_list())
 
+        #create and populate Listbox and add Scrollbar
         savegames_listbox = Listbox(savegame_display_frame, listvariable = snames, font = small_font, selectmode = SINGLE)
+        savegames_listbox.bind('<Double-1>', lambda x: load_button.invoke())
         savegames_listbox.pack(expand = True, fill = BOTH)
 
         adventure_scrollbar = ttk.Scrollbar(content_frame, orient = VERTICAL, command=savegames_listbox.yview)
@@ -244,6 +253,7 @@ class SelectSavegamePage(ttk.Frame):
             index = savegames_listbox.curselection()
             if not index:
                 None
+                #if no element is selected to nothing
             else:
                 savegame_name = savegames_listbox.get(index[0])
                 load_savegame(savegame_name) #function from adventureManager
@@ -253,12 +263,13 @@ class SelectSavegamePage(ttk.Frame):
             index = savegames_listbox.curselection()
             if not index:
                 None
+                #if no element is selected to nothing
             else:
                 if messagebox.askyesno(message='Wollen Sie den Spielstand entgueltig loeschen?') is True:
                     savegame_name = savegames_listbox.get(index[0])
                     delete_savegame(savegame_name)
+                    master.switch_frame(SelectSavegamePage(master))
                     #update_lists
-
 
 """Adventure view"""
 
@@ -268,12 +279,17 @@ class AdventurePage(ttk.Frame):
     def __init__(self, master):
         ttk.Frame.__init__(self, master)
 
+        #get list of followers for later use in button creation
         self.follower = get_follower()
+
+        self.requirements = do_followers_have_requirements()
 
         """ ########### """
         """ GUI aspects """
         """ ########### """
 
+        list = do_followers_have_requirements()
+        print list
         content_frame = ttk.Frame(self)
         content_frame.grid()
         content_frame['padding'] = (70, 100, 75, 100)
@@ -314,16 +330,27 @@ class AdventurePage(ttk.Frame):
         option_three_frame.grid(row=4, column = 1, pady = 20)
 
         """button creation"""
+
+        #exit_button uses exit_adventure function from adventureManager
+        exit_button = ttk.Button(backandsave_frame, text = 'Exit', command=lambda: exit_adventure())
+        exit_button.pack()
+
+        save_button = ttk.Button(backandsave_frame, text = 'Save', command=lambda: save_progress())
+        save_button.pack()
+        if len(self.follower) == 0:
+            #https://stackoverflow.com/questions/21673257/python-ttk-disable-enable-a-button
+            save_button.state(['disabled'])
+
         if len(self.follower) >= 1:
-            option_one_button = ttk.Button(option_one_frame, text="Test1", style = 'my.TButton', command=lambda: progress_in_story(self.follower[0]))
+            option_one_button = ttk.Button(option_one_frame, text=give_chapter_name(self.follower[0]), style = 'tiny.TButton', command=lambda: progress_in_story(self.follower[0]))
             option_one_button.pack(expand = 1, fill = BOTH)
 
         if len(self.follower) >= 2:
-            option_two_button = ttk.Button(option_two_frame, text="Test2", style = 'my.TButton', command=lambda: progress_in_story(self.follower[1]))
+            option_two_button = ttk.Button(option_two_frame, text=give_chapter_name(self.follower[1]), style = 'tiny.TButton', command=lambda: progress_in_story(self.follower[1]))
             option_two_button.pack(expand = 1, fill = BOTH)
 
         if len(self.follower) >= 3:
-            option_three_button = ttk.Button(option_three_frame, text="Test3", style = 'my.TButton', command=lambda: progress_in_story(self.follower[2]))
+            option_three_button = ttk.Button(option_three_frame, text=give_chapter_name(self.follower[2]), style = 'tiny.TButton', command=lambda: progress_in_story(self.follower[2]))
             option_three_button.pack(expand = 1, fill = BOTH)
 
         """setting up inner widgets"""
@@ -331,13 +358,6 @@ class AdventurePage(ttk.Frame):
 
         inventory_heading = ttk.Label(inventory_heading_frame, text='Inventory', font = small_font, anchor = W)
         inventory_heading.pack(expand = True)
-
-        exit_button = ttk.Button(backandsave_frame, text = 'Exit', command=lambda: exit_adventure())
-        exit_button.pack()
-
-        #! This Button need the correct 'command' assignment !#
-        save_button = ttk.Button(backandsave_frame, text = 'Save', command=lambda: save_progress())
-        save_button.pack()
 
 
         """ ################# """
@@ -384,8 +404,11 @@ class AdventurePage(ttk.Frame):
 
         #for exit button
         def exit_adventure():
-            if messagebox.askyesno(message='Ungespeicherter Spielstand geht verloren, trotzdem fortfahren?') is True:
+            if len(self.follower) == 0:
                 master.switch_frame(StartPage(master))
+            elif messagebox.askyesno(message='Ungespeicherter Spielstand geht verloren, trotzdem fortfahren?') is True:
+                master.switch_frame(StartPage(master))
+
 
 if __name__ == "__main__":
     app = StarterApp()
