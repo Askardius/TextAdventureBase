@@ -1,4 +1,4 @@
-"""controls the game logic and data manipulation"""
+"""manages the adventure import, savefiles and handling """
 """import and global variable declaration"""
 import json
 import os
