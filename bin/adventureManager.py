@@ -6,7 +6,7 @@ import os
 adventure_list = list()
 savegame_list = list()
 adventure = list()
-current_id = 5
+current_id = 0
 inventory = list()
 
 
@@ -88,11 +88,22 @@ def do_followers_have_requirements():
             while i < len(controle_split):
                 return_list.append(controle_split[i])
                 i = i + 1
-    print return_list
     return return_list
 
 
-            # returns the adventure_list
+# returns the adventure details
+def get_adventure_details():
+    details = {"name": adventure['adventure']['name'], "author:": adventure['adventure']['author']}
+    return details
+
+
+# returns the chapter details
+def get_chapter_details():
+    details = {"name": adventure['adventure']['chapter'][str(current_id)]['name'], "text:": adventure['adventure']['chapter'][str(current_id)]['text']}
+    return details
+
+
+# returns the adventure_list
 def get_adventure_list():
     return tuple(adventure_list)
 
@@ -104,11 +115,19 @@ def get_savegame_list():
 
 # give the actual chapter text
 def get_chapter_text():
-    return adventure['adventure']['chapter'][str(current_id)]['text'];
+    return adventure['adventure']['chapter'][str(current_id)]['text']
 
 # give the actual chapters follower
 def get_follower():
-    return adventure['adventure']['chapter'][str(current_id)]['follower'];
+    global follower_list
+    follower_list = list()
+    if(adventure['adventure']['chapter'][str(current_id)]['follower']["0"] != None):
+        follower_list.append(adventure['adventure']['chapter'][str(current_id)]['follower']["0"])
+    if (adventure['adventure']['chapter'][str(current_id)]['follower']["1"] != None):
+        follower_list.append(adventure['adventure']['chapter'][str(current_id)]['follower']["1"])
+    if (adventure['adventure']['chapter'][str(current_id)]['follower']["2"] != None):
+        follower_list.append(adventure['adventure']['chapter'][str(current_id)]['follower']["2"])
+    return follower_list
 
 
 """others"""
@@ -117,6 +136,8 @@ def open_adventures_folder():
     filename = os.path.join(fileDir, '../adventures')
     os.startfile(filename)
 
-#load_adventure("adventure1")
+load_adventure("adventure1")
+get_chapter_details()
+#get_follower()
 #set_next_chapter(8)
 #do_followers_have_requirements()

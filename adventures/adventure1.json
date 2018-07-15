@@ -1,5 +1,6 @@
 {"adventure": {
     "name": "Test Adventure 1",
+    "author": "me",
     "chapter": {
         "0": {
           "id": "0",
