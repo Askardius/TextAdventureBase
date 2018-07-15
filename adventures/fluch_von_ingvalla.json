@@ -230,7 +230,7 @@
         },
         "15": {
             "id": "11",
-            "name": "noch auf ein Bier bleiben?",
+            "name": "lieber die andere Tür",
             "text": "In dem Raum befindet sich ein alter Mann, wohl um die sechzig Sommer mag er zählen. Ein Thorwaler scheint er nicht zu sein, ihr schätzt seine Größe auf etwa 165 Halbfinger. Seine Haare sind, genau wie sein Bart, lang und schon deutlich ergraut. Aufgrund des Stabes, den er trägt, schließt ihr, dass er wohl ein Magier ist. Er sitzt auf einem Schemel und scheint angestrengt nachzudenken. Auf Euer Eintreten reagiert er zunächst nicht. Ansonsten befindet sich noch ein Tisch im Raum. Einige erloschene Kerzen stehen auf dem Steinboden. Wollt Ihr...",
             "follower": {
                 "0": 19,
@@ -454,7 +454,7 @@
         },
         "35": {
             "id": "35",
-            "name": "die Bücher durchsehen",
+            "name": "den Raum betreten",
             "text": "Als Ihr die Tür, die gen Efferd geht, öffnet, stürzt sich sofort ein Untoter, der sich in dem Raum befindet, auf euch. Ihr reisst eure Waffe hoch. Hinter ihm stehen gleich noch zwei bereit! Zum Glück steht Ihr in der Tür, so dass nur einer zur Zeit zuschlagen kann. Den einen, dem der linke Arm zur Hälfte fehlt, habt Ihr doch in der letzten Nacht schon gesehen...",
             "follower": {
                 "0": 39,
@@ -466,12 +466,40 @@
                 "inventory": null
             }
         },
-        "42": {
-            "id": "42",
-            "name": "Kehrt nach Ingvalla zurück",
-            "text": "“Dann lasst mich zumindest Eure Waffe segnen”, meint die Geweihte. Worauf sie eure Waffe segnet, was gegen das untote Gezücht sicherlich nicht schaden kann.",
+        "36": {
+            "id": "36",
+            "name": "die Bücher durchsehen",
+            "text": "“Da seid Ihr ja wieder! Stand Swafnir euch zur Seite, und habt Ihr etwas herausgefunden?” Was erzählt Ihr Hjelgira? ",
             "follower": {
-                "0": 8,
+                "0": 38,
+                "1": 45,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": null
+            }
+        },
+        "37": {
+            "id": "37",
+            "name": "an der Tür horchen",
+            "text": "Ihr hört Geräusche im inneren des gen Efferd zeigenden Raumes. Irgend etwas scheint sich darin mit schlurfenden Schritten zu bewegen",
+            "follower": {
+                "0": 35,
+                "1": 15,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": null
+            }
+        },
+        "38": {
+            "id": "38",
+            "name": "das Problem ist im Gutshof, ich mach das.",
+            "text": "“Dann hoffe ich, dass Ihr die Plage schnell beseitigt! Die richtige Waffe dafür habt Ihr ja. ",
+            "follower": {
+                "0": 43,
                 "1": null,
 		        "2": null
             },
@@ -480,13 +508,69 @@
                 "inventory": null
             }
         },
+        "39": {
+            "id": "39",
+            "name": "Kämpft.",
+            "text": "Nachdem Ihr die Zombies besiegt habt, durchsucht Ihr auch diesen Raum, findet aber nichts bemerkenswertes. Ein Tisch und ein paar Stühle stehen an der hinteren Wand, mitten im Raum liegt ein toter Hund, und es stinkt bestialisch. Ihr entschließt Euch, den Raum schnell wieder zu verlassen, und öffnet die letzte Tür, die gen Praios zeigt ",
+            "follower": {
+                "0": 15,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": null
+            }
+        },
+        "42": {
+            "id": "42",
+            "name": "Kehrt nach Ingvalla zurück",
+            "text": "Und wie es weitergeht erfahrt ihr in der nächsten Folge von Spaß mit Python!",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": null
+            }
+        },
+        "43": {
+            "id": "43",
+            "name": "weiter",
+            "text": "Und wie es weitergeht erfahrt ihr in der nächsten Folge von Spaß mit Python!",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": null
+            }
+        },
+        "45": {
+            "id": "45",
+            "name": "ein Magier ist das Problem",
+            "text": "Und wie es weitergeht erfahrt ihr in der nächsten Folge von Spaß mit Python!",
+            "follower": {
+                "0": null,
+                "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "end",
+                "inventory": null
+            }
+        },
         "54": {
             "id": "54",
             "name": "nächsten Raum durchsuchen",
-            "text": "“Dann lasst mich zumindest Eure Waffe segnen”, meint die Geweihte. Worauf sie eure Waffe segnet, was gegen das untote Gezücht sicherlich nicht schaden kann.",
+            "text": "Wollt ihr erst einmal an der Tür horchen oder sofort in den Raum stürmen?",
             "follower": {
-                "0": 8,
-                "1": null,
+                "0": 37,
+                "1": 35,
 		        "2": null
             },
             "trigger": {
