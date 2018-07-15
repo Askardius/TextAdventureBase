@@ -21,6 +21,7 @@ def init_logic():
 # loads all adventures from the adventures directory
 def load_all_adventures():
     global adventure_list
+    del adventure_list[:]
     names = os.listdir("../adventures")
     for filename in names:
         adventure_list.append(filename[0:-5])
@@ -29,6 +30,7 @@ def load_all_adventures():
 # load all savegames from the save directory
 def load_all_savegames():
     global savegame_list
+    del savegame_list[:]
     saves = os.listdir("../save")
     for filename in saves:
         savegame_list.append(filename[0:-5])
@@ -187,6 +189,8 @@ def get_follower():
         follower_list.append(adventure['adventure']['chapter'][str(current_id)]['follower']["2"])
     return follower_list
 
+
+# returns the inventory
 def get_inventory():
     return inventory
 
