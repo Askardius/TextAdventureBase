@@ -120,8 +120,7 @@
             },
             "trigger": {
                 "story_control": "run",
-                "inventory": "add|Waffen",
-                "require": null
+                "inventory": null
             }
         },
         "8": {
@@ -157,7 +156,7 @@
         "10": {
             "id": "10",
             "name": "Werft euch heldenhaft in den Kampf",
-            "text": "Mit einigen heftigen Hieben streckt ihr den Untoten nieder. Auch die anderen Kämpfer haben es mittlerweile geschafft, die Untoten zu besiegen. Einige der Wesen liegen tot auf dem Boden, andere fliehen. Für euch gibt es erstmal nichts zu tun. Ihr legt euch wieder zur Ruhe, schlaft erstaulich gut, und regeneriert in der Nacht 1W+3 Lebenspunkte. Am nächsten Morgen brecht Ihr in Richtung des alten Gutshofes auf... ",
+            "text": "Mit einigen heftigen Hieben streckt ihr den Untoten nieder. Auch die anderen Kämpfer haben es mittlerweile geschafft, die Untoten zu besiegen. Einige fliehen. Für euch gibt es erstmal nichts zu tun. Ihr legt euch wieder zur Ruhe und schlaft erstaulich gut. Am nächsten Morgen brecht Ihr in Richtung des alten Gutshofes auf... ",
             "follower": {
                 "0": 18,
                 "1": null,
@@ -272,7 +271,7 @@
         },
         "18": {
             "id": "18",
-            "name": "noch auf ein Bier bleiben?",
+            "name": "weiter",
             "text": "Nachdem Ihr etwa vier Stunden gen PraiosEfferd gegangen seid, seht ihr den Gutshof. Die Tür scheint nur angelehnt zu sein. Wollt ihr...",
             "follower": {
                 "0": 21,

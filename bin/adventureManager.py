@@ -212,13 +212,3 @@ def open_adventures_folder():
     filename = os.path.join(fileDir, '../adventures')
     os.startfile(filename)
 
-#init_logic()
-#get_savegame_list()
-#load_adventure("adventure1")
-#load_savegame("Test Adventure 1Chapter6")
-#set_next_chapter(0)
-#get_chapter_details()
-#save_game()
-#get_follower()
-#get_savegame_details("Test Adventure 1Chapter 6")
-#do_followers_have_requirements()
