@@ -216,7 +216,7 @@
         },
         "14": {
             "id": "14",
-            "name": "Versucht feige in den Tempel zurück zu rennen",
+            "name": "Versucht feige weg zu rennen",
             "text": "Doch der Zombie ist schneller und wirft euch zu Boden. Unaufhörlich prasseln seine Fäuste auf euch ein, dann verliert Euer Held das Bewusstsein, und Euch bleibt nur zu hoffen, dass er von Golgari geholt wird...",
             "follower": {
                 "0": null,
@@ -244,7 +244,7 @@
         },
         "16": {
             "id": "16",
-            "name": "noch auf ein Bier bleiben?",
+            "name": "lest das Pergament",
             "text": "“Gustavo, mein alter Lehrmeister, hat den Verstand verloren. Ich bin nicht mächtig genug, es mit ihm aufzunehmen, werde also gezwungen sein, mir Hilfe zu holen. Alles ist vorbereitet für das Ritual. Ich hoffe, dass alles gelingt... Leichen zu erwecken, und einen Dämon zu beschwören, das ist doch ein gewaltiger Unterschied...”",
             "follower": {
                 "0": 42,
@@ -378,70 +378,38 @@
 		        "2": null
             },
             "trigger": {
-                "story_control": "end",
+                "story_control": "run",
                 "inventory": null
             }
-        }
-        "27": {
-            "id": "11",
-            "name": "noch auf ein Bier bleiben?",
-            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
-            "follower": {
-                "0": null,
-                "1": null,
-		        "2": null
-            },
-            "trigger": {
-                "story_control": "end",
-                "inventory": "use|Waffen",
-                "require": "Waffen"
-            }
-        }
+        },
         "28": {
             "id": "28",
             "name": "euch im Raum umsehen",
-            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "text": "Ihr findet noch einige magische Utensilien, sowie ein paar Vorräte, entscheidet euch aber, alles an seinem Platz zu lassen. Aber auf einem Tisch liegt ein Stück Pergament.",
             "follower": {
-                "0": null,
-                "1": null,
+                "0": 16,
+                "1": 42,
 		        "2": null
             },
             "trigger": {
-                "story_control": "end",
-                "inventory": "use|Waffen",
-                "require": "Waffen"
+                "story_control": "run",
+                "inventory": null
             }
-        }
+        },
         "29": {
             "id": "29",
             "name": "sucht nach einer Erklärung.",
-            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
+            "text": "Da ihr euch mit magischen Dingen überhaupt nicht auskennt, fällt euch nichts weiter auf.",
             "follower": {
-                "0": null,
+                "0": 24,
                 "1": null,
 		        "2": null
             },
             "trigger": {
-                "story_control": "end",
-                "inventory": "use|Waffen",
-                "require": "Waffen"
+                "story_control": "run",
+                "inventory": null
             }
-        }
-        "30": {
-            "id": "11",
-            "name": "noch auf ein Bier bleiben?",
-            "text": "Ihr packt die Waffen aus und macht die Hexe nieder. Anschließend zieht ihr in ihr leckeres Haus, macht ein paar inzestuöse Wasserkopfkinder und begründet eine neue Kanibalen Redneck Sippe um auch in Zukunft noch Stoff für Horrorfilme zu haben. ENDE",
-            "follower": {
-                "0": null,
-                "1": null,
-		        "2": null
-            },
-            "trigger": {
-                "story_control": "end",
-                "inventory": "use|Waffen",
-                "require": "Waffen"
-            }
-        }
+        },
         "31": {
             "id": "31",
             "name": "das Angebot annehmen?",
@@ -473,10 +441,24 @@
         "34": {
             "id": "34",
             "name": "die Bücher durchsehen",
-            "text": "“Dann lasst mich zumindest Eure Waffe segnen”, meint die Geweihte. Worauf sie eure Waffe segnet, was gegen das untote Gezücht sicherlich nicht schaden kann.",
+            "text": "Es handelt sich offensichtlich um die Bibliothek eines Magiers. Wertvolle Bücher sind auf den ersten Blick nicht darunter. Den Titeln nach zu urteilen liegt ein Schwerpunkt der Bibliothek auf der Beschwörung",
             "follower": {
-                "0": 8,
+                "0": 54,
                 "1": null,
+		        "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": null
+            }
+        },
+        "35": {
+            "id": "35",
+            "name": "die Bücher durchsehen",
+            "text": "Als Ihr die Tür, die gen Efferd geht, öffnet, stürzt sich sofort ein Untoter, der sich in dem Raum befindet, auf euch. Ihr reisst eure Waffe hoch. Hinter ihm stehen gleich noch zwei bereit! Zum Glück steht Ihr in der Tür, so dass nur einer zur Zeit zuschlagen kann. Den einen, dem der linke Arm zur Hälfte fehlt, habt Ihr doch in der letzten Nacht schon gesehen...",
+            "follower": {
+                "0": 39,
+                "1": 14,
 		        "2": null
             },
             "trigger": {

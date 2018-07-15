@@ -134,7 +134,7 @@
 		        "2": 11
             },
             "trigger": {
-                "story_control": "require|Waffen,Drogen, Pornos",
+                "story_control": "require|Drogen, Pornos, Waffen",
                 "inventory": null,
                 "require": null
             }

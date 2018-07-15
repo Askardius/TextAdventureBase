@@ -116,7 +116,7 @@ def check_inventory_for(item):
     return answer
 
 
-# returns requirements for next chapters, if none returnes list is empty
+# returns requirements for next chapters, if none return list is empty
 def do_followers_have_requirements():
     global return_list
     return_list = list()
