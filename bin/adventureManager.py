@@ -6,8 +6,9 @@ import os
 adventure_list = list()
 savegame_list = list()
 adventure = list()
-current_id = 0
+current_id = 5
 inventory = list()
+
 
 
 """init function, data import and data manipulation"""
@@ -38,12 +39,40 @@ def load_all_savegames():
 # load a given adventure
 def load_adventure(adventure_name):
     global adventure
-    filename = "adventures/" + adventure_name + ".json"
+    filename = "../adventures/" + adventure_name + ".json"
     with open(filename) as myfile:
         adventure = json.load(myfile)
-    print adventure['adventure']['chapter']['0']['text'];
 
 
+# sets the next chapter active, also triggers inventory check
+def set_next_chapter(id):
+    global current_id
+    current_id = id
+    check_inventory()
+
+
+# checks the actual chapter if inventory changes happen and if makes them
+def check_inventory():
+    inventory_now = adventure['adventure']['chapter'][str(current_id)]['trigger']['inventory']
+    if(inventory_now  != None):
+        inventory_splitted = inventory_now.partition("|")
+        if(inventory_splitted[0] == "add"):
+            inventory.append(inventory_splitted[2])
+        elif(inventory_splitted[0] == "remove"):
+            for item in inventory:
+                if(item == inventory_splitted[2]):
+                    inventory.remove(inventory_splitted[2])
+    print inventory
+
+
+# checks if a required item is in the inventory
+def check_inventory_for(item):
+    global answer
+    answer = False
+    for current_item in inventory:
+        if(current_item == item):
+            answer = True
+    return answer
 
 """getter and setter"""
 # returns the adventure_list
@@ -58,11 +87,11 @@ def get_savegame_list():
 
 # give the actual chapter text
 def get_chapter_text():
-    return adventure['adventure']['chapter'][current_id]['text'];
+    return adventure['adventure']['chapter'][str(current_id)]['text'];
 
 # give the actual chapters follower
 def get_follower():
-    return adventure['adventure']['chapter'][current_id]['follower'];
+    return adventure['adventure']['chapter'][str(current_id)]['follower'];
 
 
 """others"""
@@ -70,3 +99,4 @@ def open_adventures_folder():
     fileDir = os.path.dirname(os.path.realpath('__file__'))
     filename = os.path.join(fileDir, '../adventures')
     os.startfile(filename)
+

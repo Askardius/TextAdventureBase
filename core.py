@@ -1,6 +1,8 @@
 import sys
-from bin import logicControler
-from bin import viewControler
+from bin import adventureManager
+from bin import viewManager
 
-logicControler.init_logic()
-logicControler.load_adventure("adventure1")
+adventureManager.init_logic()
+adventureManager.load_adventure()
+adventureManager.check_inventory()
+#adventureManager.get_chapter_text()
