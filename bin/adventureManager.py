@@ -24,7 +24,6 @@ def load_all_adventures():
     names = os.listdir("../adventures")
     for filename in names:
         adventure_list.append(filename[0:-5])
-    print adventure_list
 
 
 # load all savegames from the save directory
@@ -33,7 +32,6 @@ def load_all_savegames():
     saves = os.listdir("../save")
     for filename in saves:
         savegame_list.append(filename[0:-5])
-    print savegame_list
 
 
 # load a given adventure
@@ -41,7 +39,14 @@ def load_adventure(adventure_name):
     global adventure
     filename = "../adventures/" + adventure_name + ".json"
     with open(filename) as myfile:
-        adventure = json.load(myfile)
+        try:
+            json_buffer = json.load(myfile)
+            if (len(json_buffer['adventure']['name']) >0 and len(json_buffer['adventure']['author']) > 0):
+                adventure = json_buffer
+            else:
+                return "Sorry, the chosen file is currupt!"
+        except:
+            return "Sorry, file has the wrong format!"
 
 
 # makes a savegame
@@ -67,12 +72,13 @@ def load_savegame(file_name):
         load_adventure(save['filename'].replace(".json", ""))
         set_next_chapter(save['chapter'])
         inventory = save['inventory']
-    print adventure['adventure']['name']
-    print current_id
-    print inventory
 
 
 
+# deletes a savegame
+def delete_savegame(filename):
+    file_path = "../save/" + filename
+    os.remove(file_path)
 
 
 """getter and setter"""
@@ -134,6 +140,20 @@ def get_chapter_details():
     return details
 
 
+# returns the savegame details
+def get_savegame_details(filename):
+    global data
+    data = {}
+    filename = "../save/" + filename + ".json"
+    with open(filename) as myfile:
+        save = json.load(myfile)
+        data['name'] = save['name']
+        data['filename'] = save['filename']
+        data['chapter'] = save['chapter']
+    print data
+    return data
+
+
 # returns the adventure_list
 def get_adventure_list():
     return tuple(adventure_list)
@@ -141,13 +161,13 @@ def get_adventure_list():
 
 # returns the savegame_list
 def get_savegame_list():
-    print savegame_list
     return tuple(savegame_list)
 
 
 # give the actual chapter text
 def get_chapter_text():
     return adventure['adventure']['chapter'][str(current_id)]['text']
+
 
 # give the actual chapters follower
 def get_follower():
@@ -170,10 +190,10 @@ def open_adventures_folder():
 
 #init_logic()
 #get_savegame_list()
-#load_adventure("adventure1")
+load_adventure("adventure2")
 #load_savegame("Test Adventure 1Chapter6")
 #set_next_chapter(6)
 #save_game()
 #get_follower()
-
+#get_savegame_details("Test Adventure 1Chapter 6")
 #do_followers_have_requirements()
