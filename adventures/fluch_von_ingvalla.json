@@ -7,10 +7,10 @@
         "0": {
           "id": "0",
           "name": "Start",
-          "text": "Hänsel und Gretel gingen in den Wald. Dort war es finster und auch so bitter kalt. An einer Kreuzung stand ein Wegweiser, auf dem Stand rechts Freiheit links böse Hexe. In welche Richtung möchtest du gehen?",
+          "text": "“Seid gegrüßt! Ich sehe, Ihr tragt eine Waffe. Könnt Ihr damit auch umgehen? Gestattet, dass ich mich vorstelle, mein Name ist Janske Thurboldson, ich komme aus Ingvalla, einem Dorf, zu Pferd etwa zwei Tagesreisen von hier – sofern man sich beeilt.”",
           "follower": {
-              "0": 1,
-              "1": 2,
+              "0": 2,
+              "1": null,
               "2": null
           },
           "trigger": {
@@ -19,25 +19,10 @@
                 "require": null
           }
         },
-        "1": {
-            "id": "1",
-            "name": "Gehe nach rechts in die Freiheit",
-            "text": "Sie gingen nach rechts, in die Freiheit. Leider war das Schild von Sklavenhändlern aufgestellt worden, welche Hänsel zur Kinderarbeit in einen Steinbruch verkauften, wo er früh starb und Gretel in die Prostitution, wo sie noch heute anschaffen geht. ENDE",
-            "follower": {
-                "0": null,
-                "1": null,
-                "2": null
-            },
-            "trigger": {
-                "story_control": "end",
-                "inventory": null,
-                "require": null
-            }
-        },
         "2": {
             "id": "2",
-            "name": "Gehe nach links zur bösen Hexe",
-            "text": "Da sie gehört hatten, das Hexen meist in leckeren essbaren Häusern wohnen und ziemliche Schätze hatten, beschlossen sie die alte Hexe zu besuchen. Sie gingen fast einen halben Tag immer weiter in den Wald. Als plötzlich ein kleines Männchen am Wegesrand stand.",
+            "name": "Weiter",
+            "text": "Der junge Mann, der vor euch steht, ist ein junger Thorwaler, er mag vielleicht zwanzig Sommer zählen. Sein blondes Haar trägt er zu zwei Zöpfen geflochten, und auf seinem linken Oberarm hat er eines der typischen Thorwaler Hautbilder, einen Wal. “Ingvalla ist verflucht”, fährt er fort, “wir brauchen jemanden, der uns hilft. Ihr seht so aus, als wäret Ihr wie geschaffen für diese Aufgabe!” Was antwortet Ihr?",
             "follower": {
                 "0": 3,
                 "1": 4,
@@ -51,7 +36,22 @@
         },
         "3": {
             "id": "3",
-            "name": "ignoriere den Knilch",
+            "name": "“Lasst uns in ein Wirtshaus gehen, und erzählt mir, worum es geht.”",
+            "text": "Da sie gehört hatten, das Hexen meist in leckeren essbaren Häusern wohnen und ziemliche Schätze hatten, beschlossen sie die alte Hexe zu besuchen. Sie gingen fast einen halben Tag immer weiter in den Wald. Als plötzlich ein kleines Männchen am Wegesrand stand.",
+            "follower": {
+                "0": 3,
+                "1": 4,
+                "2": null
+            },
+            "trigger": {
+                "story_control": "run",
+                "inventory": null,
+                "require": null
+            }
+        },
+        "4": {
+            "id": "4",
+            "name": "Morgen ist Immanspiel, da kann ich hier nicht weg.",
             "text": "Da der kleine Kerl aussieht wie ein Kinderschänder auf Freigang, ignoriert ihr ihn und marschiert weiter den Weg entlang",
             "follower": {
                 "0": 5,

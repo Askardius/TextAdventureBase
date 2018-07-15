@@ -79,6 +79,7 @@ def load_savegame(file_name):
 def delete_savegame(filename):
     file_path = "../save/" + filename
     os.remove(file_path)
+    load_all_savegames()
 
 
 """getter and setter"""
@@ -130,7 +131,7 @@ def do_followers_have_requirements():
 
 # returns the adventure details
 def get_adventure_details():
-    details = {"name": adventure['adventure']['name'], "author:": adventure['adventure']['author']}
+    details = {"name": adventure['adventure']['name'], "author:": adventure['adventure']['author'], "description": adventure['adventure']['description']}
     return details
 
 
@@ -181,6 +182,10 @@ def get_follower():
         follower_list.append(adventure['adventure']['chapter'][str(current_id)]['follower']["2"])
     return follower_list
 
+
+# returns the name of a given chapter
+def give_chapter_name(id):
+    return adventure['adventure']['chapter'][str(id)]['name']
 
 """others"""
 def open_adventures_folder():
